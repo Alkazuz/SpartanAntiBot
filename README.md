@@ -1,6 +1,6 @@
 # SpartanAntiBot
 This a open-source Bungeecord &amp; Spigot antibot plugin to protect your server from attacks.\
-This project was developed in 2018, where it protected attacks from that time, there are chances to protect current attacks.\
+This project was developed in 2018, where it protected attacks from that time, maybe current attacks methods.\
 The last update of this project was in 2020. This project has been discontinued and is published only for those who wish to update
 
 ## Features
