@@ -21,7 +21,6 @@ public class NoneListener implements Listener{
 	@EventHandler
     public void onJoin(final PlayerJoinEvent e) {
 		Player p = e.getPlayer();
-		
 		if(!Configuration.CAPTCHA_ATIVADO)return;
         Bukkit.getScheduler().scheduleSyncDelayedTask(SpartanAntiBot.thePlugin(), (Runnable)new Runnable() {
             @Override

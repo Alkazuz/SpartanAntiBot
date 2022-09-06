@@ -21,7 +21,6 @@ import br.alkazuz.antibot.bukkit.config.MessagesManager;
 import br.alkazuz.antibot.bukkit.database.SQLManager;
 import br.alkazuz.antibot.bukkit.hooks.AuthmeListener;
 import br.alkazuz.antibot.bukkit.hooks.NoneListener;
-import br.alkazuz.antibot.bukkit.hooks.nLoginListener;
 import br.alkazuz.antibot.bukkit.listener.AsyncPreLoginListener;
 import br.alkazuz.antibot.bukkit.listener.ChatListener;
 import br.alkazuz.antibot.bukkit.listener.MotdPingListener;
@@ -79,7 +78,7 @@ public class SpartanAntiBot extends JavaPlugin{
 		new Config();
 		new Messages();
 		
-		new Configuration();
+		Configuration.reload();
 		
 		createSQLConnections();
 		sendConcoleMessage("Carregando protecoes...");
