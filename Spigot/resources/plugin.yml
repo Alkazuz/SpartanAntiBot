@@ -1,0 +1,9 @@
+name: AntiBot
+version: 4.0 - BETA
+author: Alkazuz
+load: STARTUP
+main: br.alkazuz.antibot.bukkit.main.SpartanAntiBot
+softdepend: [ProtocolLib, AuthMe, nLogin]
+commands:
+  sab:
+  

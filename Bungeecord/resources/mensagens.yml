@@ -1,0 +1,5 @@
+ActionBar:
+    BotBlock: "&f(%bot%) &7foi detectado como bot (&c%protection%&7) &a - %pps% pps | %hps% Pre Handler"
+Title:
+    Title: "&6&lSpartan&2&lAntiBot"
+    BotsBloqueados: "&4&l%n% &cbots bloqueados no ultimos 10 segundos"

@@ -1,0 +1,95 @@
+# +-----------------------------------------------+
+# <              SpartanAntiBot 4.0              >
+# +-----------------------------------------------+
+
+#PERMISSÕES#
+# sab.admin
+
+# Chamar cada protecao de acordo com a ordem por nomes
+# Metodos de proteçao não listados nao serao chamados
+Protecao:
+ - 'BloqueioDeIP'
+ - 'ServerPing'
+ - 'BloqueioDePaises'
+ - 'BloqueioDeProxy'
+ 
+# Ativar sistema de paises bloqueados/permitidos
+BloqueioDeDNS:
+  # lista de provedores bloqueadas
+  Provedores:
+  - 'OVH'
+  - 'Google'
+  Kick:
+  - '&cVocê foi expulso de nosso Sistema'
+  - ' '
+  - '&4Seu provedor foi bloqueado'
+  - ' '
+  - '&cCaso isso seja um erro,'
+  - '&centre em contato com um administrador'
+ 
+# Ativar sistema de paises bloqueados/permitidos
+BloqueioDePaises:
+  # Tipo = WHITELIST e BLACKLIST
+  # Whitelist = somente os paises na lista poderao entrar
+  # Blacklist = paises na lista nao poderao entrar
+  Tipo: WHITELIST
+  # Ativar se o numero de logins for maior que o numero definido
+  LimiteDeLogin:
+    Ativado: true
+    # Número de logins para ativar (necessário estar ativado)
+    Logins: 20
+  # Codigos de cada país
+  # http://kirste.userpage.fu-berlin.de/diverse/doc/ISO_3166.html
+  Codes:
+  - 'BR'
+  - 'PT'
+  Kick:
+  - '&cVocê foi expulso de nosso Sistema'
+  - ' '
+  - '&4Seu País não está permitido em nosso Servidor'
+  - ' '
+  - '&cCaso isso seja um erro,'
+  - '&centre em contato com um administrador'
+
+# Permitir conexões somente com servidor na lista de Servidores
+ServerPing:
+  Kick:
+  - '&cVocê foi expulso de nosso Sistema'
+  - ' '
+  - '&4Adicione o Servidor na lista de Servidores'
+  - '&eMultiPlayer -> Adicionar Servidor -> MeuServidor.com'
+  - '&eAguarde a motd carregar e tente novamente'
+  - ' '
+  - '&cCaso isso seja um erro,'
+  - '&centre em contato com um administrador'
+
+# Negar conexões com Proxy/VPN
+BloqueioDeProxy:
+  Kick:
+  - '&cVocê foi expulso de nosso Sistema'
+  - ' '
+  - '&4Proxy detectado'
+  - ' '
+  - '&cCaso isso seja um erro,'
+  - '&centre em contato com um administrador'
+  
+# Caso um IP atacar sem proxy, ele será bloqueado temporáriamente
+BloqueioDeIP:
+  # Tempo em segundos para desbloquear o IP
+  Tempo: 300
+  Kick:
+  - '&cVocê foi expulso de nosso Sistema'
+  - ' '
+  - '&4Seu IP foi bloqueado temporáriamente'
+  - '&4por tentar atacar bot'
+  - ' '
+  - '&cCaso isso seja um erro,'
+  - '&centre em contato com um administrador'
+
+# Mensagens que serao ignoradas pelo console
+MessagesOcultas:
+- 'UUID of player'
+- 'logged in with entity id'
+- 'com.mojang.authlib.GameProfile@'
+- 'lost connection'
+- 'Disconnecting net.minecraft.util.com.mojang.authlib.GameProfile'

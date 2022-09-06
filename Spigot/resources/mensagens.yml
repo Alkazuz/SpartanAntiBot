@@ -1,0 +1,22 @@
+ActionBar:
+    BotBlock: "&f(%bot%) &7foi detectado como bot (&c%protection%&7) &a - %pps% pps | %hps% Pre Handler"
+Title:
+    Title: "&6&lSpartan&2&lAntiBot"
+    BotsBloqueados: "&4&l%n% &cbots bloqueados no ultimos 10 segundos"
+Bloqueado: "&3[SAB] &c{0} &7foi bloqueado por floodar o login"
+Desbloqueado: "&3[SAB] &c{0} &7foi desbloqueado"
+Whitelist:
+    Adicionado: "&3[SAB] &7adicionando o IP &c{0} &7na Whitelist"
+Comandos:
+    SemPermissao: "&cVocê não tem permissão para executar isto"
+    PlayerInexistente: "&cJogador inexistente ou offline"
+    Blacklist:
+        JaExiste: "&cEste IP já está na blacklist interna"
+        Adicionou: "&aVocê adicionou com sucesso o IP &f{0} &ana &fblacklist"
+        Removeu: "&aVocê removeu com sucesso o IP &f{0} &ada &fblacklist"
+        NaoEstaNaBlacklist: "&cEste IP não está na blacklist interna"
+    Notificacao:
+        Ativada: "&aNotificações foram ativadas para você"
+        Desativada: "&cNotificações foram desativadas para você"
+        JaAtivada: "&cSuas notificações já estão ativadas"
+        JaDesativada: "&cSuas notificações já estão desativadas"

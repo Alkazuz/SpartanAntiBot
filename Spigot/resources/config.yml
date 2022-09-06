@@ -1,0 +1,154 @@
+# +-----------------------------------------------+
+# <              SpartanAntiBot 4.0              >
+# +-----------------------------------------------+
+
+#PERMISSÕES#
+# sab.admin
+
+# Configurações do MYSQL
+MySQL:
+    enable: false
+    host: 'localhost'
+    port: '3306'
+    database: 'antibot'
+    user: 'root'
+    password: ''
+
+# Extrair proxy de links
+ProxyScrapper:
+  Ativado: true
+  Links:
+  - 'https://e-proxy.ru/UK-Proxy'
+  - 'https://e-proxy.ru/'
+  - 'https://e-proxy.ru/Anonymous-Proxy'
+  - 'https://e-proxy.ru/Google-Proxy'
+  - 'https://e-proxy.ru/Socks-Proxy'
+  - 'https://e-proxy.ru/SSL-Proxy'
+  - 'https://openproxy.space/free-proxy-list'
+  - 'https://proxyhttp.net/free-list/anonymous-server-hide-ip-address'
+  - 'https://proxyhttp.net/free-list/anonymous-server-hide-ip-address/2#proxylist'
+  - 'https://proxyhttp.net/free-list/anonymous-server-hide-ip-address/3#proxylist'
+  - 'https://proxyhttp.net/free-list/anonymous-server-hide-ip-address/4#proxylist'
+  - 'https://proxyhttp.net/free-list/anonymous-server-hide-ip-address/5#proxylist'
+  - 'https://proxyhttp.net/free-list/anonymous-server-hide-ip-address/6#proxylist'
+  - 'https://proxyhttp.net/free-list/anonymous-server-hide-ip-address/7#proxylist'
+  - 'https://proxyhttp.net/free-list/anonymous-server-hide-ip-address/8#proxylist'
+  - 'https://proxyhttp.net/free-list/anonymous-server-hide-ip-address/9#proxylist'
+  - 'http://en.proxies.su/'
+  - 'http://en.proxies.su/?page=2'
+  - 'http://en.proxies.su/?page=3'
+  - 'http://en.proxies.su/?page=4'
+  - 'http://en.proxies.su/?page=5'
+  - 'http://en.proxies.su/?page=6'
+  - 'http://en.proxies.su/?page=7'
+  - 'http://en.proxies.su/?page=8'
+  - 'http://en.proxies.su/?page=9'
+  - 'http://en.proxies.su/?page=10'
+  - 'http://en.proxies.su/?page=11'
+  - 'http://en.proxies.su/?page=12'
+  - 'http://en.proxies.su/?page=13'
+  - 'http://en.proxies.su/?page=14'
+  - 'http://en.proxies.su/?page=15'
+  - 'http://en.proxies.su/?page=16'
+
+# Chamar cada protecao de acordo com a ordem por nomes
+# Metodos de proteçao não listados nao serao chamados
+Protecao:
+ - 'BloqueioDeIP'
+ - 'ServerPing'
+ - 'Rejoin'
+ - 'BloqueioDePaises'
+ - 'BloqueioDeProxy'
+ 
+# Sistema de whitelist interna (recomendado ativado)
+Whitelist:
+  Ativado: true
+  AutoAdicionar:
+    Ativado: true
+    #Tempo para adicionar na whitelist (em segundos), necessário estar ativo
+    Tempo: 60 
+    
+# Análise de Heuristica
+Heuristica:
+  Ativado: true
+  # Em segundos
+  TempoParaReber: 3
+    
+# Sistema de Captcha
+Captcha:
+  Ativado: false
+  # Em segundos
+  TempoParaKick: 10
+ 
+# Fazer o jogador relogar na primeira vez conectado ao Servidor
+Rejoin:
+  Kick:
+  - ' '
+  - '&aSua conexão está sendo verificada, por favor relogue'
+  - ' '
+ 
+# Ativar sistema de paises bloqueados/permitidos
+BloqueioDePaises:
+  # Tipo = WHITELIST e BLACKLIST
+  # Whitelist = somente os paises na lista poderao entrar
+  # Blacklist = paises na lista nao poderao entrar
+  Tipo: WHITELIST
+  # Codigos de cada país
+  # http://kirste.userpage.fu-berlin.de/diverse/doc/ISO_3166.html
+  IgnorarWhitelist: false
+  Codes:
+  - 'BR'
+  - 'PT'
+  Kick:
+  - '&cVocê foi expulso de nosso Sistema'
+  - ' '
+  - '&4Seu País não está permitido em nosso Servidor'
+  - ' '
+  - '&cCaso isso seja um erro,'
+  - '&centre em contato com um administrador'
+
+# Permitir conexões somente com servidor na lista de Servidores
+ServerPing:
+  IgnorarWhitelist: false
+  Kick:
+  - '&cVocê foi expulso de nosso Sistema'
+  - ' '
+  - '&4Adicione o Servidor na lista de Servidores'
+  - '&eMultiPlayer -> Adicionar Servidor -> MeuServidor.com'
+  - '&eAguarde a motd carregar e tente novamente'
+  - ' '
+  - '&cCaso isso seja um erro,'
+  - '&centre em contato com um administrador'
+
+# Negar conexões com Proxy/VPN
+BloqueioDeProxy:
+  IgnorarWhitelist: false
+  Kick:
+  - '&cVocê foi expulso de nosso Sistema'
+  - ' '
+  - '&4Proxy detectado'
+  - ' '
+  - '&cCaso isso seja um erro,'
+  - '&centre em contato com um administrador'
+  
+# Caso um IP atacar sem proxy, ele será bloqueado temporáriamente
+BloqueioDeIP:
+  # Tempo em segundos para desbloquear o IP
+  Tempo: 300
+  IgnorarWhitelist: true
+  Kick:
+  - '&cVocê foi expulso de nosso Sistema'
+  - ' '
+  - '&4Seu IP foi bloqueado temporáriamente'
+  - '&4por floodar o login'
+  - ' '
+  - '&cCaso isso seja um erro,'
+  - '&centre em contato com um administrador'
+
+# Mensagens que serao ignoradas pelo console
+MessagesOcultas:
+- 'UUID of player'
+- 'logged in with entity id'
+- 'com.mojang.authlib.GameProfile@'
+- 'lost connection'
+- 'Disconnecting net.minecraft.util.com.mojang.authlib.GameProfile'
